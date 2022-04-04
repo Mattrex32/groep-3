@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dashboard</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="./js/index.js" defer></script>
+    <script src="https://unpkg.com/chart.js@2.8.0/dist/Chart.bundle.js" defer></script>
+    <script src="https://unpkg.com/chartjs-gauge@0.3.0/dist/chartjs-gauge.js" defer></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <script src="./js/weer.js" defer></script>
+      <script src="./js/chart.js" defer></script>
+</head>
+<body onload="startTime()">   
+     
+    <article>
+        <!-- begin datum en tijd -->
+    <li class="cards1" class="card1">
+        <section id="dashboard">
+        <div class="card clock">
+            <div  id="txt"></div>
+            <script>
+                    date = new Date().toLocaleDateString();
+                    document.write(date);
+                </script>
+            </div>
+    </li>
+    <!-- einde datum en tijd -->
+    <li class="cards" class="card2">card2</li>
+    <li class="cards" class="card3"></li>
+    
+    <!-- weer -->
+    <li class="cards" class="card4">weer
+        <div class="card">
+            <div class="search">
+              <input type="text" class="search-bar" placeholder="Search">
+              <button><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1em"
+                  width="1.5em" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M909.6 854.5L649.9 594.8C690.2 542.7 712 479 712 412c0-80.2-31.3-155.4-87.9-212.1-56.6-56.7-132-87.9-212.1-87.9s-155.5 31.3-212.1 87.9C143.2 256.5 112 331.8 112 412c0 80.1 31.3 155.5 87.9 212.1C256.5 680.8 331.8 712 412 712c67 0 130.6-21.8 182.7-62l259.7 259.6a8.2 8.2 0 0 0 11.6 0l43.6-43.5a8.2 8.2 0 0 0 0-11.6zM570.4 570.4C528 612.7 471.8 636 412 636s-116-23.3-158.4-65.6C211.3 528 188 471.8 188 412s23.3-116.1 65.6-158.4C296 211.3 352.2 188 412 188s116.1 23.2 158.4 65.6S636 352.2 636 412s-23.3 116.1-65.6 158.4z">
+                  </path>
+                </svg></button>
+            </div>
+            <div class="weather loading">
+              <h2 class="city">Weather in Amsterdam</h2>
+              <h1 class="temp">5°C</h1>
+              <div class="flex">
+                <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon" />
+                <div class="description">Cloudy</div>
+              </div>
+              <div class="humidity">Humidity: 60%</div>
+              <div class="wind">Wind speed: 6.2 km/h</div>
+            </div>
+          </div>
+    </li>
+    <!-- einde weer -->
+    
+    <li class="cards"  class="card5">card5</li>
+    <li class="cards"  class="card6">gas-grafiek 
+        <div class="gas-meter" id="canvas-holder" style="width:100%">
+            <canvas id="chart"></canvas>
+          </div>
+          <button class="btn-randomizeData" id="randomizeData">Randomize Data</button>
+    </li>
+    
+    <!-- begin grafiek water -->
+    <li class="cards7" class="card7">      
+         <section>   
+        <canvas  class="grafiekwater" id="myChart"> </canvas>
+        </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+    <script src="script.js"></script></li>
+    <!-- einde grafiek -->
+
+    <li class="cards" class="card8">card8</li>
+    <li class="cards" class="card9">card9</li>
+</article>
+</body>
+</html>
